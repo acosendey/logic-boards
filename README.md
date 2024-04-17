@@ -4,7 +4,7 @@
 
 - [ ] Make it deploy
 - [ ] Scaffold basic ui with mock data
-- [ ] Tidy up build process
+- [X] Tidy up build process
 - [ ] Actually set up a db (SUPABASE)
 - [ ] Attach database to ui
 - [ ] Add auth (??)
