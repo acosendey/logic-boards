@@ -9,7 +9,7 @@
 
 # On Linux and macOS you can run this script directly - `./start-database.sh`
 
-DB_CONTAINER_NAME="logic-board-postgres"
+DB_CONTAINER_NAME="logic_boards-postgres"
 
 if ! [ -x "$(command -v docker)" ]; then
   echo -e "Docker is not installed. Please install docker and try again.\nDocker install guide: https://docs.docker.com/engine/install/"
@@ -31,7 +31,7 @@ fi
 set -a
 source .env
 
-DB_PASSWORD=$(echo "$DATABASE_URL" | awk -F':' '{print $3}' | awk -F'@' '{print $1}')
+DB_PASSWORD=$(echo "$POSTGRES_URL" | awk -F':' '{print $3}' | awk -F'@' '{print $1}')
 
 if [ "$DB_PASSWORD" = "password" ]; then
   echo "You are using the default database password"
@@ -48,6 +48,6 @@ fi
 docker run -d \
   --name $DB_CONTAINER_NAME \
   -e POSTGRES_PASSWORD="$DB_PASSWORD" \
-  -e POSTGRES_DB=logic-board \
+  -e POSTGRES_DB=logic_boards \
   -p 5432:5432 \
   docker.io/postgres && echo "Database container '$DB_CONTAINER_NAME' was successfully created"

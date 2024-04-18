@@ -2,8 +2,8 @@
 
 ## todo list
 
-- [ ] Make it deploy
-- [ ] Scaffold basic ui with mock data
+- [X] Make it deploy
+- [X] Scaffold basic ui with mock data
 - [X] Tidy up build process
 - [ ] Actually set up a db (SUPABASE)
 - [ ] Attach database to ui
