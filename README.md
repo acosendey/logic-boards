@@ -12,7 +12,7 @@
 - [X] Add image upload
   - [X] Personal gallery: only show user's images 
 - [X] "taint" (server only) //security
-- [ ] Next Images component
+- [X] Next Images component
 - [ ] Error management (SENTRY)
 - [ ] Routing/image page (parallel route)
 - [ ] Delete button (w/ Server Actions)
