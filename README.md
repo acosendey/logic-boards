@@ -10,10 +10,10 @@
 - [X] Attach database to ui
 - [X] Add authentication
 - [X] Add image upload
-  - [ ] Personal gallery: only show user's images 
-- [ ] "TAINT" (server only)
+  - [X] Personal gallery: only show user's images 
+- [X] "taint" (server only) //security
 - [ ] Next Images component
-- [ ] Error handling (SENTRY)
+- [ ] Error management (SENTRY)
 - [ ] Routing/image page (parallel route)
 - [ ] Delete button (w/ Server Actions)
 - [ ] Analytics (POSTHOG)

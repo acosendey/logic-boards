@@ -1,13 +1,11 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
-import { db } from "~/server/db";
 import UploadC from "./_components/uploadzone";
+import { getMyImages } from "~/server/queries";
 
 // export const dynamic = ""; #add dynamic rendering
 
 async function Images() {
-  const images = await db.query.images.findMany({
-    orderBy: (model, { desc }) => desc(model.id),
-  });
+  const images = await getMyImages();
 
   return (
     <div className="flex flex-wrap gap-4">
