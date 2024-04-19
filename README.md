@@ -9,8 +9,10 @@
 - [X] Build basic database schema
 - [X] Attach database to ui
 - [X] Add authentication
-- [ ] Add image upload
+- [X] Add image upload
+  - [ ] Personal gallery: only show user's images 
 - [ ] "TAINT" (server only)
+- [ ] Next Images component
 - [ ] Error handling (SENTRY)
 - [ ] Routing/image page (parallel route)
 - [ ] Delete button (w/ Server Actions)

@@ -1,5 +1,6 @@
-import { SignIn, SignedIn, SignedOut } from "@clerk/nextjs";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { db } from "~/server/db";
+import UploadC from "./_components/uploadzone";
 
 // export const dynamic = ""; #add dynamic rendering
 
@@ -9,13 +10,13 @@ async function Images() {
   });
 
   return (
-    <div className="flex flex-wrap gap-4"> {
-      [...images].map((image, index) => (
-        <div key={image.id + "-" + index} className="flex w-48 flex-col">
+    <div className="flex flex-wrap gap-4">
+      {images.map((image) => (
+        <div key={image.id} className="flex w-48 flex-col">
           <img src={image.url} />
           <div className="">{image.name}</div>
         </div>
-      ))};
+      ))}
     </div>
   );
 }
@@ -24,10 +25,12 @@ export default async function HomePage() {
   return (
     <main className="">
       <SignedOut>
-        <div className="h-full w-full text-2xl text-center">Sign In Pls</div>
+        <UploadC />
+        <div className="h-full w-full text-center text-2xl">Sign In Pls</div>
       </SignedOut>
       <SignedIn>
         <Images />
+        <UploadC />
       </SignedIn>
     </main>
   );
