@@ -8,8 +8,9 @@
 - [X] Actually set up a db (vercel)
 - [X] Build basic database schema
 - [X] Attach database to ui
-- [ ] Add authentication
+- [X] Add authentication
 - [ ] Add image upload
+- [ ] "TAINT" (server only)
 - [ ] Error handling (SENTRY)
 - [ ] Routing/image page (parallel route)
 - [ ] Delete button (w/ Server Actions)
