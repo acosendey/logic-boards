@@ -14,7 +14,7 @@
 - [X] "taint" (server only) //security
 - [X] Next Images component
 - [X] Error management (SENTRY)
-- [ ] Routing/image page (parallel route)
+- [X] Routing/image page (parallel route)
 - [ ] Delete button (w/ Server Actions)
 - [ ] Analytics (POSTHOG)
 - [ ] Ratelimiting (UPSTASH)
