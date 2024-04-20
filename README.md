@@ -13,7 +13,7 @@
   - [X] Personal gallery: only show user's images 
 - [X] "taint" (server only) //security
 - [X] Next Images component
-- [ ] Error management (SENTRY)
+- [X] Error management (SENTRY)
 - [ ] Routing/image page (parallel route)
 - [ ] Delete button (w/ Server Actions)
 - [ ] Analytics (POSTHOG)

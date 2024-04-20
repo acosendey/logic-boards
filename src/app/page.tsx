@@ -2,6 +2,7 @@ import { SignedIn, SignedOut } from "@clerk/nextjs";
 import UploadC from "./_components/uploadzone";
 import { getMyImages } from "~/server/queries";
 import Image from "next/image";
+import Link from "next/link";
 
 // export const dynamic = ""; #add dynamic rendering
 
@@ -12,14 +13,16 @@ async function Images() {
     <div className="flex flex-wrap justify-center gap-4">
       {images.map((image) => (
         <div key={image.id} className="flex w-48 flex-col">
-          <Image
-            src={image.url}
-            style={{ objectFit: "contain" }}
-            width={200}
-            height={200}
-            alt={image.name}
-          />
-          <div className="">{image.name}</div>
+          <Link href={`/img/${image.id}`} passHref>
+            <Image
+              src={image.url}
+              style={{ objectFit: "contain" }}
+              width={200}
+              height={200}
+              alt={image.name}
+            />
+          </Link>
+          <div>{image.name}</div>
         </div>
       ))}
     </div>
