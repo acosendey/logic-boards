@@ -3,15 +3,16 @@ import UploadC from "./_components/uploadzone";
 import { getMyImages } from "~/server/queries";
 import Image from "next/image";
 import Link from "next/link";
+import { SimpleUploadButton } from "./_components/upload-button";
 
-// export const dynamic = ""; #add dynamic rendering
+export const dynamic = "force-dynamic"; //dynamic rendering is enabled by the page
 
 async function Images() {
   const images = await getMyImages();
 
   return (
     <div className="flex flex-wrap justify-center gap-4 p-4">
-      {[...images, ...images, ...images, ...images].map((image) => (
+      {images.map((image) => (
         <div key={image.id} className="flex w-48 flex-col">
           <Link href={`/img/${image.id}`}>
             <Image
@@ -33,12 +34,12 @@ export default async function HomePage() {
   return (
     <main className="">
       <SignedOut>
-        <UploadC />
+        <SimpleUploadButton />
         <div className="h-full w-full text-center text-2xl">Sign In Pls</div>
       </SignedOut>
       <SignedIn>
         <Images />
-        <UploadC />
+        <SimpleUploadButton />
       </SignedIn>
     </main>
   );
