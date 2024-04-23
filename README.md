@@ -15,6 +15,8 @@
 - [X] Next Images component
 - [X] Error management (SENTRY)
 - [X] Routing/image page (parallel route)
+- [ ] Customize upload button
+- [ ] ShadcnUI: notification (toast)
 - [ ] Delete button (w/ Server Actions)
 - [ ] Analytics (POSTHOG)
 - [ ] Ratelimiting (UPSTASH)
