@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import { useUploadThing } from "~/utils/uploadthing";
 import { toast } from "sonner";
 
-
 // inferred input off useUploadThing
 type Input = Parameters<typeof useUploadThing>;
 
@@ -50,31 +49,65 @@ function UploadSVG() {
   );
 }
 
+function LoadingSpinnerSVG() {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect className="spinner_hzlK" x="1" y="1" width="6" height="22" />
+      <rect
+        className="spinner_hzlK spinner_koGT"
+        x="9"
+        y="1"
+        width="6"
+        height="22"
+      />
+      <rect
+        className="spinner_hzlK spinner_YF1u"
+        x="17"
+        y="1"
+        width="6"
+        height="22"
+      />
+    </svg>
+  );
+}
+
 export function SimpleUploadButton() {
   const router = useRouter();
+
   const { inputProps } = useUploadThingInputProps("imageUploader", {
     //helper functions theo built
     onUploadBegin() {
-      toast('STATUS', {
-        description: 'Uploading...',
-        duration: 1000,
-        id: 'upload-begin',
-      });
+      toast(
+        <div className="flex items-center gap-2">
+          <span className="text-lg">STATUS</span> <LoadingSpinnerSVG />
+        </div>,
+        {
+          description: "Uploading...",
+          duration: 100000,
+          id: "upload-begin",
+        },
+      );
     },
     onClientUploadComplete() {
-      toast('STATUS', {
-        description: 'Upload complete',
+      toast("STATUS", {
+        description: "Upload complete",
         duration: 1000,
-        id: 'upload-complete',
+        id: "upload-complete",
       });
       router.refresh();
     },
   });
 
   return (
-    <div className="flex flex-col items-start align-sub px-6">
+    <div className="flex flex-col items-start px-6 align-sub">
       <label htmlFor="upload-button" className="cursor-pointer">
-        <UploadSVG />UPLOAD
+        <UploadSVG />
+        UPLOAD
       </label>
       <input
         id="upload-button"

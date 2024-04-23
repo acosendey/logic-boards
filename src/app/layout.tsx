@@ -10,7 +10,6 @@ import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
 import { Toaster } from "sonner";
 
-
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
