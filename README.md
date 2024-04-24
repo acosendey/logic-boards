@@ -19,5 +19,6 @@
 - [X] ShadcnUI: notification (toast)
 - [ ] Setup Analytics (POSTHOG)
   - [ ] Prevent adblockers from blocking analytics
+  - [ ] Tracking events
 - [ ] Delete button (w/ Server Actions)
 - [ ] Ratelimiting (UPSTASH)
