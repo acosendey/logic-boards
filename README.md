@@ -17,8 +17,8 @@
 - [X] Routing/image page (parallel route)
 - [X] Customize upload button
 - [X] ShadcnUI: notification (toast)
-- [ ] Setup Analytics (POSTHOG)
-  - [ ] Prevent adblockers from blocking analytics
-  - [ ] Tracking events
+- [X] Setup Analytics (POSTHOG)
+  - [X] Prevent adblockers from blocking analytics
+  - [X] Tracking events
 - [ ] Delete button (w/ Server Actions)
 - [ ] Ratelimiting (UPSTASH)
