@@ -15,11 +15,11 @@ export default async function FullPageImageView(props: { id: number }) {
         <div className="border-b text-center text-lg">{image.name}</div>
 
         <div className="flex flex-col p-2 ">
-          <span className="text-gray-50/30 text-sm">Uploaded by</span>
+          <span className="text-gray-50/30 text-smNEXT_PUBLIC_POSTHOG_KEY=phc_zGsU536NJVQJzUc8MqULV9EfXB9GtBAf6yxqJUEFMhI">Uploaded by</span>
           <span>{uploaderInfo.fullName}</span>
         </div>
         <div className="flex flex-col p-2 ">
-          <span className="text-gray-50/30 text-sm">Created on</span>
+          <span className="text-gray-50/30 text-smNEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com">Created on</span>
           <span>{new Date(image.createdAt).toLocaleDateString()}</span>
         </div>
       </div>
