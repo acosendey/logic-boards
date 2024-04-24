@@ -1,4 +1,4 @@
-# PROJECT
+# **PROJECT**
 
 ## todo list
 
@@ -17,6 +17,7 @@
 - [X] Routing/image page (parallel route)
 - [X] Customize upload button
 - [X] ShadcnUI: notification (toast)
-- [ ] Analytics (POSTHOG)
+- [ ] Setup Analytics (POSTHOG)
+  - [ ] Prevent adblockers from blocking analytics
 - [ ] Delete button (w/ Server Actions)
 - [ ] Ratelimiting (UPSTASH)
