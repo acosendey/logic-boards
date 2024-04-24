@@ -20,5 +20,5 @@
 - [X] Setup Analytics (POSTHOG)
   - [X] Prevent adblockers from blocking analytics
   - [X] Tracking events
-- [ ] Delete button (w/ Server Actions)
+- [X] Delete button (w/ Server Actions)
 - [ ] Ratelimiting (UPSTASH)
