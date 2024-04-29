@@ -18,7 +18,6 @@ const useUploadThingInputProps = (...args: Input) => {
     const result = await $ut.startUpload(selectedFiles);
 
     console.log("uploaded files", result);
-    // TODO: persist result in state maybe?
   };
 
   return {
@@ -102,7 +101,6 @@ export function SimpleUploadButton() {
 
 
   const { inputProps } = useUploadThingInputProps("imageUploader", {
-    //helper functions theo built
     onUploadBegin() {
       posthog.capture("upload begin");
       toast(

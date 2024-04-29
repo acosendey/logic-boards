@@ -21,4 +21,10 @@
   - [X] Prevent adblockers from blocking analytics
   - [X] Tracking events
 - [X] Delete button (w/ Server Actions)
-- [ ] Ratelimiting (UPSTASH)
+- [X] Ratelimiting (UPSTASH)
+---
+### CHALLENGES
+- [ ] Fix the page layout for images of different resolutions
+- [ ] Selecting images in the gallery (ZUSTAND)
+- [ ] Infinite scrolling 
+- [ ] Folders/Albums 
